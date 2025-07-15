@@ -1,0 +1,19 @@
+<div *ngIf="emp" class="container mt-4">
+    <div class="card shadow-sm">
+      <div class="card-header bg-primary text-white">
+        <h4>Employee Details</h4>
+      </div>
+      <div class="card-body">
+        <p><strong>ID:</strong> {{ emp.id }}</p>
+        <p><strong>Name:</strong> {{ emp.name }}</p>
+        <p><strong>Email:</strong> {{ emp.email }}</p>
+        <p><strong>Position:</strong> {{ emp.position }}</p>
+        <p><strong>Salary:</strong> {{ emp.salary | currency }}</p>
+        <p><strong>Department:</strong> {{ emp.department?.name }} ({{ emp.department?.id }})</p>
+      </div>
+      <div class="card-footer text-end">
+        <button class="btn btn-secondary" (click)="goBack()">Back</button>
+      </div>
+    </div>
+  </div>
+  

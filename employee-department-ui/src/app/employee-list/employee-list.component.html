@@ -1,0 +1,10 @@
+<input [(ngModel)]="deptId" placeholder="Enter Department ID">
+<button (click)="fetch()">Search</button>
+<table *ngIf="employees.length">
+  <tr *ngFor="let emp of employees">
+    <td>{{ emp.name }}</td>
+    <td>{{ emp.email }}</td>
+    <td><button (click)="view(emp)">View</button></td>
+    <td><button (click)="delete(emp.id)">Delete</button></td>
+  </tr>
+</table>
